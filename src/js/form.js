@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Set the min attribute for the appointmentDate input to today's date
-  const today = new Date().toISOString().split("T")[0];
-  document.getElementById("appointmentDate").setAttribute("min", today);
+  // Set the min attribute for the appointmentDate input to today's date in the local timezone
+  const today = new Date();
+  const day = String(today.getDate()).padStart(2, "0");
+  const month = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+  const year = today.getFullYear();
+  const localDate = `${year}-${month}-${day}`;
+
+  document.getElementById("appointmentDate").setAttribute("min", localDate);
 
   const form = document.getElementById("contact-form");
   const status = document.getElementById("formSuccessMessage");
