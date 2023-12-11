@@ -1,0 +1,58 @@
+.contact-form-container {
+  padding: 4rem 0; // Increase padding for a more spacious look
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0;
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: $accent-color;
+    text-align: center; // Center-align text for these sections
+  }
+  p {
+    font-size: 1.1rem; // Slightly larger paragraph text for readability
+    max-width: 800px; // Max width for text to maintain optimal line length
+    margin: 0 auto; // Center the paragraphs if they're not full width
+    line-height: 1.8; // Increase line height for better readability
+    text-align: center; // Center-align text for these sections
+  }
+  .input-group {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.25rem;
+    }
+    .submit-button {
+      background-color: #0044cc;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      &:hover {
+        background-color: #003399;
+      }
+    }
+  }
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+    label {
+      margin-bottom: 0;
+    }
+  }
+}
