@@ -34,13 +34,52 @@ p {
   margin-bottom: 1rem;
 }
 
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  display: none; /* Hidden by default */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333; /* Add a hover effect */
+}
+
 header {
   background-color: #005a92;
   color: #ffffff;
-  padding: 0.5rem 0;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+header > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+header > a img {
+  width: auto;
+  height: 50px;
+}
+header > a p {
+  color: #ffffff;
+  margin-left: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+header > a p:hover, header > a p:focus {
+  color: #4caf50;
+  transition: color 0.3s;
 }
 header h1 {
   margin: 0;
@@ -97,8 +136,22 @@ header nav ul li a:hover, header nav ul li a:focus {
 }
 
 .btn {
-  font-size: 1.125rem;
-  padding: 0.75rem 2rem;
+  text-decoration: none;
+  background-color: #4caf50;
+  color: #ffffff;
+  padding: 1rem 3rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+  background-color: #3d8b40;
+  transform: scale(1.05);
+}
+
+.services-preview {
+  text-align: center;
 }
 
 .services-preview li {
@@ -166,17 +219,128 @@ header nav ul li a:hover, header nav ul li a:focus {
     font-size: 1rem;
   }
 }
-footer {
+.about-us h2 {
+  color: #005a92;
+}
+
+.services-preview {
+  background-color: #ffffff;
+  padding: 4rem 0;
+}
+.services-preview h2 {
+  font-size: 2.5rem;
+  color: #005a92;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.services-preview ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+.services-preview ul li {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #4caf50;
+  font-size: 1.1rem;
+}
+.services-preview ul li:last-child {
+  margin-bottom: 0;
+}
+
+.doctors-preview {
+  padding: 4rem 0;
+  text-align: center;
+}
+.doctors-preview h2 {
+  font-size: 2.5rem;
+  color: #005a92;
+  margin-bottom: 2rem;
+}
+.doctors-preview .doctor-profile {
+  width: 100%; /* Adjust width as necessary */
+  max-width: 300px; /* Maximum width of the profile */
+  margin: auto; /* Center the profile */
+  overflow: hidden; /* Hide any overflow */
+}
+.doctors-preview .doctor-profile img {
+  width: 100%; /* Make the image fill the container */
+  max-height: 370px; /* Maximum image height */
+  display: block; /* Prevent inline default space */
+  -o-object-fit: cover;
+     object-fit: cover; /* Cover the area without distorting aspect ratio */
+  -o-object-position: top;
+     object-position: top; /* Align the top of the image with the container */
+}
+.doctors-preview .doctor-profile h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.doctors-preview .doctor-profile p {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+  .doctors-preview {
+    padding: 2rem 1rem;
+  }
+  .doctors-preview .doctor-profile {
+    padding: 0 1rem;
+  }
+  .doctors-preview .doctor-profile img {
+    max-width: 200px;
+  }
+  .doctors-preview .doctor-profile h3 {
+    font-size: 1.3rem;
+  }
+  .doctors-preview .doctor-profile p {
+    font-size: 1rem;
+  }
+  .doctors-preview .btn {
+    padding: 0.75rem 1.5rem;
+  }
+}
+.cta-appointment {
+  background-color: #f2f2f2;
+  padding: 4rem 0;
+  text-align: center;
+}
+.cta-appointment h2 {
+  font-size: 2.5rem;
+  color: #005a92;
+  margin-bottom: 1rem;
+}
+.cta-appointment p {
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.footer-container {
   background-color: #003f5c;
   color: #b3b3b3;
-  padding: 1rem 0;
+  padding: 2rem 0;
+  text-align: center;
 }
-footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  width: 100%;
+.footer-container p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
-footer p, footer a {
-  font-size: 0.875rem;
+.footer-container a {
+  color: #ffffff;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+.footer-container a:hover {
+  color: #4caf50;
+}
+.footer-container a i {
+  font-size: 2rem;
+  vertical-align: middle;
 }/*# sourceMappingURL=main.css.map */

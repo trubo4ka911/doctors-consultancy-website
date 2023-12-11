@@ -133,16 +133,17 @@
   }
 
   .doctor-profile {
-    // Center the content and apply a max-width for better control
-    margin: auto;
-    max-width: 800px; // Adjust as needed based on your design
-    padding: 0 2rem; // Padding on the sides
+    width: 100%; /* Adjust width as necessary */
+    max-width: 300px; /* Maximum width of the profile */
+    margin: auto; /* Center the profile */
+    overflow: hidden; /* Hide any overflow */
 
     img {
-      width: 100%; // Make sure the image is responsive
-      max-width: 300px; // Max-width for the image
-      height: auto; // Maintain aspect ratio
-      margin-bottom: 2rem; // Space below the image
+      width: 100%; /* Make the image fill the container */
+      max-height: 370px; /* Maximum image height */
+      display: block; /* Prevent inline default space */
+      object-fit: cover; /* Cover the area without distorting aspect ratio */
+      object-position: top; /* Align the top of the image with the container */
     }
 
     h3 {
@@ -204,3 +205,4 @@
     margin: 0 auto 2rem; // Center the text block and space before the button
   }
 }
+

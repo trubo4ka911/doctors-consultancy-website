@@ -1,0 +1,13 @@
+#scrollToTopBtn {
+  z-index: 99;
+  color: #4caf50;
+  cursor: pointer;
+  font-size: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333; /* Add a hover effect */
+}/*# sourceMappingURL=scrollBtn.css.map */

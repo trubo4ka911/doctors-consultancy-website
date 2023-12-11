@@ -7,7 +7,18 @@
     <!-- Favicon -->
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+    ></script>
+    <!-- fontawesome -->
+    <script
+      type="module"
       src="https://kit.fontawesome.com/cb6722e468.js"
       crossorigin="anonymous"
     ></script>
@@ -74,24 +85,50 @@
       <!-- Doctors Preview Section -->
       <section class="doctors-preview">
         <h2>Our Esteemed Medical Team</h2>
-        <!-- Doctor 1 -->
-        <div class="doctor-profile">
-          <img src="./images/doctors.svg" alt="Dr. Emily Smith, Cardiologist" />
-          <h3>Dr. Emily Smith</h3>
-          <p>
-            Leading Cardiologist with a focus on preventative care and heart
-            health education.
-          </p>
-        </div>
-        <!-- Doctor 2 -->
-        <div class="doctor-profile">
-          <img src="./images/doctors.svg" alt="Dr. John Davis, Pediatrician" />
-          <h3>Dr. John Davis</h3>
-          <p>
-            Devoted Pediatrician passionate about child health and developmental
-            support.
-          </p>
-        </div>
+        <swiper-container class="mySwiper" navigation="true">
+          <swiper-slide>
+            <!-- Doctor 1 -->
+            <div class="doctor-profile">
+              <img
+                src="./images/doctor1.png"
+                alt="Dr. Emily Smith, Cardiologist"
+              />
+              <h3>Dr. Emily Smith</h3>
+              <p>
+                Leading Cardiologist with a focus on preventative care and heart
+                health education.
+              </p>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <!-- Doctor 2 -->
+            <div class="doctor-profile">
+              <img
+                src="./images/doctor2.png"
+                alt="Dr. John Davis, Pediatrician"
+              />
+              <h3>Dr. John Davis</h3>
+              <p>
+                Devoted Pediatrician passionate about child health and
+                developmental support.
+              </p>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <!-- Doctor 3 -->
+            <div class="doctor-profile">
+              <img
+                src="./images/doctor3.png"
+                alt="Dr. John Davis, Pediatrician"
+              />
+              <h3>Dr. Dean Morris</h3>
+              <p>
+                Esteemed Neurologist committed to advancing brain health and
+                treating neurological disorders.
+              </p>
+            </div>
+          </swiper-slide>
+        </swiper-container>
         <a href="doctors.html" class="btn">Get to Know Us</a>
       </section>
 
@@ -116,5 +153,10 @@
         </p>
       </div>
     </footer>
+    <button id="scrollToTopBtn" title="Go to top">
+      <i class="fa-solid fa-circle-chevron-up"></i>
+    </button>
+
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>

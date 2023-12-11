@@ -1,0 +1,17 @@
+#scrollToTopBtn {
+  display: none;
+  z-index: 99;
+  border: none;
+  background-color: transparent;
+  color: $accent-color;
+  cursor: pointer;
+  font-size: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  transition: color 0.3s;
+}
+
+#scrollToTopBtn:hover {
+  color: $primary-color;
+}
