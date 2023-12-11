@@ -1,0 +1,95 @@
+// header.scss
+header {
+  background-color: $primary-color;
+  color: $white;
+  padding: 0.5rem 1rem; // Add padding around the entire header
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // This targets the anchor tag directly inside the header
+  > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    img {
+      width: auto; // Maintain the original image aspect ratio
+      height: 50px; // Set a fixed height for your logo
+    }
+
+    p {
+      color: $white;
+      margin-left: 10px; // Add some space between the logo and the title
+      font-size: 1.8rem; // Adjust the font size as needed
+      font-weight: bold; // If you want the title to be bold
+      &:hover,
+      &:focus {
+        color: $accent-color;
+        transition: color 0.3s;
+      }
+    }
+  }
+
+  h1 {
+    margin: 0; // Remove any default margin
+    padding-left: 1rem; // Padding to keep the title from the edge
+    font-size: 2rem; // Adjust the font size as needed
+  }
+
+  nav {
+    // The navigation should take the full height of the header for vertical alignment
+    height: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    align-items: center; // This ensures vertical alignment
+    margin-right: 1rem; // Padding to keep the nav from the edge
+    padding: 0; // Reset any default padding
+    list-style: none; // Remove default list styling
+  }
+
+  nav ul li {
+    margin: 0 10px; // Add horizontal margin for spacing between nav items
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 10px 15px; // Padding to make each nav item a larger click target
+      border-radius: 5px; // Rounded corners for modern aesthetic
+      transition: background-color 0.3s, color 0.3s; // Smooth transition for hover effects
+      &:hover,
+      &:focus {
+        background-color: darken(
+          $primary-color,
+          10%
+        ); // Subtle background color on hover
+        border-radius: 5px;
+        color: $secondary-color; // Text color change for contrast
+        text-decoration: none; // Remove underline from links
+      }
+    }
+  }
+
+  // Media query for responsive navigation
+  @include responsive("phone") {
+    flex-direction: column; // Stack the title and nav vertically on smaller screens
+    h1 {
+      padding: 0.5rem; // Adjust padding for mobile
+      text-align: center; // Center the title on mobile
+    }
+    nav ul {
+      width: 100%; // Full width for the nav
+      justify-content: center; // Center the nav items
+      li a {
+        display: block; // Stack the links
+        width: 100%; // Full width for each link
+        text-align: center; // Center the text for each link
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// base.scss
+body {
+  font-family: $font-stack;
+  line-height: 1.6;
+  background: $secondary-color;
+  color: $text-color;
+}
+
+h1, h2, h3 {
+  font-weight: 300; // Lighter font-weight for headers
+}
+
+h1 {
+  font-size: 3rem; // Larger font size for main heading
+}
+
+h2 {
+  font-size: 2.5rem; // Appropriate size for section titles
+  margin: 0.5rem 0 1rem; // Add margin for spacing
+}
+
+p {
+  font-size: 1rem; // Standard font size for paragraph text
+  margin-bottom: 1rem; // Bottom margin for paragraph spacing
+}

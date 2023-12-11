@@ -1,0 +1,182 @@
+.banner .container,
+.about-us .container,
+.services-preview .container,
+.doctors-preview .container,
+.cta-appointment .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background: #f2f2f2;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0 1rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+header {
+  background-color: #005a92;
+  color: #ffffff;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  margin: 0;
+  padding-left: 1rem;
+  font-size: 2rem;
+}
+header nav {
+  height: 100%;
+}
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  margin-right: 1rem;
+  padding: 0;
+  list-style: none;
+}
+header nav ul li {
+  margin: 0 10px;
+}
+header nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+header nav ul li a:hover, header nav ul li a:focus {
+  background-color: #003b5f;
+  border-radius: 5px;
+  color: #f2f2f2;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+  header h1 {
+    padding: 0.5rem;
+    text-align: center;
+  }
+  header nav ul {
+    width: 100%;
+    justify-content: center;
+  }
+  header nav ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.btn {
+  font-size: 1.125rem;
+  padding: 0.75rem 2rem;
+}
+
+.services-preview li {
+  transition: box-shadow 0.3s ease;
+}
+.services-preview li:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.doctors-preview .doctor-profile {
+  flex-direction: column;
+}
+@media (max-width: 900px) {
+  .doctors-preview .doctor-profile {
+    flex-direction: row;
+    align-items: center;
+  }
+  .doctors-preview .doctor-profile img {
+    margin-right: 1rem;
+  }
+}
+
+.banner,
+.about-us {
+  padding: 4rem 0;
+  text-align: center;
+}
+.banner h2,
+.about-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #4caf50;
+}
+.banner p,
+.about-us p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+.banner .container,
+.about-us .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.banner {
+  background-color: #006aac;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .banner,
+  .about-us {
+    padding: 2rem 1rem;
+  }
+  .banner h2,
+  .about-us h2 {
+    font-size: 1.75rem;
+  }
+  .banner p,
+  .about-us p {
+    font-size: 1rem;
+  }
+}
+footer {
+  background-color: #003f5c;
+  color: #b3b3b3;
+  padding: 1rem 0;
+}
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+footer p, footer a {
+  font-size: 0.875rem;
+}/*# sourceMappingURL=main.css.map */

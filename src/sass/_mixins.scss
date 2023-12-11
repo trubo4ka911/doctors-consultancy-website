@@ -1,0 +1,36 @@
+// mixins.scss
+@mixin container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem; // Increased padding for better spacing on the sides
+  width: 100%;
+}
+@mixin responsive($device) {
+  @if $device == "phone" {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if $device == "tablet" {
+    @media (max-width: 900px) {
+      @content;
+    }
+  } @else if $device == "desktop" {
+    @media (min-width: 901px) {
+      @content;
+    }
+  }
+}
+
+// Use the container mixin in your sections
+.banner .container,
+.about-us .container,
+.services-preview .container,
+.doctors-preview .container,
+.cta-appointment .container {
+  @include container;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

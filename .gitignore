@@ -1,0 +1,15 @@
+# Dependency directories
+node_modules/
+
+# Parcel cache directory
+.parcel-cache/
+
+# Production build directory
+dist/
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
