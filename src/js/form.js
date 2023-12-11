@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const today = new Date().toISOString().split("T")[0];
   document.getElementById("appointmentDate").setAttribute("min", today);
 
-  const form = document.getElementById("my-form");
+  const form = document.getElementById("contact-form");
   const status = document.getElementById("formSuccessMessage");
 
   const displayStatus = (message, isSuccess = true) => {
