@@ -54,7 +54,7 @@
       <section class="services-accordion">
         <!-- Preventative Health Screenings -->
 <div class="accordion-item">
-  <button class="accordion-button" onclick="toggleAccordion('preventive-health-details')">
+  <button class="accordion-button" data-accordion-target="preventive-health-details">
     Preventative Health Screenings
   </button>
   <div class="accordion-content" id="preventive-health-details">
@@ -88,7 +88,7 @@
 
 <!-- Specialty Medical Consultations -->
 <div class="accordion-item">
-  <button class="accordion-button" onclick="toggleAccordion('specialty-consultations-details')">
+  <button class="accordion-button" data-accordion-target='specialty-consultations-details'>
     Specialty Medical Consultations
   </button>
   <div class="accordion-content" id="specialty-consultations-details">
@@ -119,7 +119,7 @@
 
 <!-- Chronic Disease Management -->
 <div class="accordion-item">
-  <button class="accordion-button" onclick="toggleAccordion('chronic-disease-details')">
+  <button class="accordion-button" data-accordion-target='chronic-disease-details'>
     Chronic Disease Management
   </button>
   <div class="accordion-content" id="chronic-disease-details">
@@ -150,32 +150,20 @@
 
       </section>
     </main>
-
-    <script>
-      function toggleAccordion(accordionId) {
-        var content = document.getElementById(accordionId);
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          // Close all open accordions before opening the new one
-          var accordions = document.getElementsByClassName("accordion-content");
-          for (var i = 0; i < accordions.length; i++) {
-            accordions[i].style.display = "none";
-          }
-          // Open the accordion that was clicked
-          content.style.display = "block";
-        }
-      }
-    </script>
-
     <footer>
       <div class="footer-container">
         <p>&copy; 2023 HealthBridge Consultancy. All rights reserved.</p>
         <p>
           Follow us on
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://twitter.com/" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
         </p>
       </div>
     </footer>

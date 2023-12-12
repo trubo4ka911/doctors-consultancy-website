@@ -1,3 +1,6 @@
 import "./scrollToTop";
-import './form';
-import './modal';
+import "./form";
+import './toggleAccordion';
+import "./modal";
+
+

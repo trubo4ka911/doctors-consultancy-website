@@ -1,0 +1,84 @@
+.contact-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+
+  h1 {
+    color: $service-accent;
+    
+  }
+
+  p,
+  a {
+    
+    margin-top: 0.5rem;
+    display: block; // Ensures each link is on a new line
+    color: #005f56; // Adjust color to match your design
+    text-decoration: none; // Removes underline from links
+
+    &:hover {
+      color: #00796b; // Darker shade when hovered for better interaction feedback
+    }
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    border-bottom: 1px solid #ccc; // Adds a separator
+    padding-bottom: 2rem;
+
+    div {
+      max-width: 300px;
+      margin-right: 2rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #00796b;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #666;
+    }
+  }
+  .contact-details h2 {
+    font-size: 1.5rem;
+    color: #00796b;
+    margin-bottom: 0.5rem;
+  }
+  .map-container {
+    margin-top: 2rem;
+
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+
+      @media (max-width: 768px) {
+        height: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+
+    div {
+      max-width: 100%;
+      margin-bottom: 1rem;
+      margin-right: 0;
+    }
+  }
+}
