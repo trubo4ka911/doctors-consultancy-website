@@ -1,0 +1,58 @@
+.team-introduction {
+    text-align: center;
+    margin-bottom: 2rem;
+  
+    h1 {
+      font-size: 2.5rem;
+      color: #005f73; // Adjust the color to match your branding
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+  
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  
+    .doctor-profile {
+      background: #edf6f9; // A light background color for the profile cards
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      width: 300px; // Fixed width for each profile
+  
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+  
+      h3 {
+        font-size: 1.5rem;
+        color: #006d77; // Adjust the color to match your branding
+        margin-top: 0.5rem;
+      }
+  
+      p {
+        padding: 0 1rem 1rem;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  
+  // Add media queries for responsiveness
+  @media (max-width: 768px) {
+    .team-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

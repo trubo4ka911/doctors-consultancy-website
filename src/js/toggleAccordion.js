@@ -1,4 +1,3 @@
-// toggleAccordion.js
 export const toggleAccordion = (accordionId) => {
   const content = document.getElementById(accordionId);
   if (content.style.display === "block") {
