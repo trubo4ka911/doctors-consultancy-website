@@ -1,0 +1,74 @@
+.services-intro {
+    text-align: center;
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: $accent-color;
+    }
+    p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    img {
+      width: 300px;
+    }
+  }
+  .services-accordion {
+    .accordion-item {
+      margin-bottom: 1rem;
+    }
+  
+    .accordion-button {
+      background: #009688;
+      color: white;
+      padding: 1rem;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: background-color 0.6s ease;
+      cursor: pointer;
+      outline: none;
+  
+      &:hover {
+        background-color: darken(#009688, 5%);
+      }
+    }
+  
+    .accordion-content {
+      background-color: #ffffff;
+      display: none; 
+      padding: 20px; 
+      border-left: 5px solid $service-accent; 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+      margin: 10px 0; 
+      line-height: 1.6; 
+      ul {
+          padding-left: 20px; 
+          list-style: inside; 
+        }
+    }
+  }
+  .btn {
+      background-color: $service-accent;
+      color: $white;
+      padding: 10px 15px; 
+      border: none; 
+      border-radius: 5px; 
+      font-weight: bold; 
+      text-transform: uppercase;
+      letter-spacing: 1px; 
+      transition: all 0.3s ease; 
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+      display: inline-block; 
+      cursor: pointer; 
+      text-decoration: none;
+    }
+    
+    .btn:hover, .btn:focus {
+      background-color: $service-background-color; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+      outline: none; 
+    }

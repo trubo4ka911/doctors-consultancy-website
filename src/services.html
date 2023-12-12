@@ -24,38 +24,166 @@
     ></script>
     <title>HealthBridge Consultancy</title>
   </head>
-<body>
+  <body>
     <header>
-        <a href="index.html">
-          <img src="./images/logo.png" alt="logo" width="40" />
-          <p>HealthBridge Consultancy</p>
-        </a>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="doctors.html">Doctors</a></li>
-            <li><a href="appointment.html">Book Appointment</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-      <footer>
-        <div class="footer-container">
-          <p>&copy; 2023 HealthBridge Consultancy. All rights reserved.</p>
-          <p>
-            Follow us on
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          </p>
-        </div>
-      </footer>
-      <button id="scrollToTopBtn" title="Go to top">
-        <i class="fa-solid fa-circle-chevron-up"></i>
-      </button>
-  
-      <script type="module" src="./js/main.js"></script>
-      <main></main>
-</body>
+      <a href="index.html">
+        <img src="./images/logo.png" alt="logo" width="40" />
+        <p>HealthBridge Consultancy</p>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="services-intro">
+        <h2>Discover Our Professional Medical Services</h2>
+        <p>
+          Explore a wide range of healthcare services tailored to your needs.
+          Our dedicated team ensures the highest quality care for you and your
+          family.
+        </p>
+        <img src="./images/doctors.svg" alt="team" />
+      </section>
+
+      <section class="services-accordion">
+        <!-- Preventative Health Screenings -->
+<div class="accordion-item">
+  <button class="accordion-button" onclick="toggleAccordion('preventive-health-details')">
+    Preventative Health Screenings
+  </button>
+  <div class="accordion-content" id="preventive-health-details">
+    <p>
+      Our clinic provides thorough health screenings that serve as a first line of defense against illness. These check-ups include blood tests, blood pressure monitoring, BMI calculations, and other vital checks. They're essential for catching potential health issues early on when they are most treatable.
+    </p>
+    <p>
+      Patients will receive a personalized health report and a consultation with a healthcare professional to discuss the results and next steps, if any are necessary. We also offer tailored advice on lifestyle adjustments to improve overall health and prevent diseases.
+    </p>
+    <p>
+      <strong>Key Benefits:</strong>
+      <ul>
+        <li>Early detection of potential health issues</li>
+        <li>Personalized health advice</li>
+        <li>Comprehensive reports and follow-ups</li>
+      </ul>
+    </p>
+    <button data-modal-target="preventativeHealthModal" class="btn">Learn More About Screenings</button>
+
+
+    <!-- Modal for Preventative Health Screenings -->
+<div id="preventativeHealthModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">×</span>
+    <h2>Preventative Health Screenings</h2>
+    <p>This is detailed information about Preventative Health Screenings...</p>
+  </div>
+</div>
+  </div>
+</div>
+
+<!-- Specialty Medical Consultations -->
+<div class="accordion-item">
+  <button class="accordion-button" onclick="toggleAccordion('specialty-consultations-details')">
+    Specialty Medical Consultations
+  </button>
+  <div class="accordion-content" id="specialty-consultations-details">
+    <p>
+      Our team of specialists covers a wide range of disciplines, from cardiology to orthopedics. Consultations involve detailed assessments using the latest diagnostic tools to provide accurate diagnoses and treatment plans.
+    </p>
+    <p>
+      <strong>Services Include:</strong>
+      <ul>
+        <li>Cardiology assessments and heart health plans</li>
+        <li>Orthopedic evaluations for musculoskeletal concerns</li>
+        <li>Neurological examinations for brain health</li>
+      </ul>
+    </p>
+    <button data-modal-target="specialtyConsultationsModal" class="btn">Learn More About Screenings</button>
+
+
+    <!-- Modal for Specialty Medical Consultations -->
+<div id="specialtyConsultationsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">×</span>
+    <h2>Specialty Medical Consultations</h2>
+    <p>This is detailed information about Specialty Medical Consultations...</p>
+  </div>
+</div>
+  </div>
+</div>
+
+<!-- Chronic Disease Management -->
+<div class="accordion-item">
+  <button class="accordion-button" onclick="toggleAccordion('chronic-disease-details')">
+    Chronic Disease Management
+  </button>
+  <div class="accordion-content" id="chronic-disease-details">
+    <p>
+      Managing a chronic disease is a lifelong journey. Our clinic supports patients with tailored management plans that include medication management, lifestyle modification, and regular check-ups to monitor health status.
+    </p>
+    <p>
+      <strong>We specialize in managing:</strong>
+      <ul>
+        <li>Diabetes and related complications</li>
+        <li>Chronic heart conditions</li>
+        <li>Respiratory diseases such as asthma and COPD</li>
+      </ul>
+    </p>
+    <button data-modal-target="chronicDiseaseModal" class="btn">Learn More About Screenings</button>
+
+
+    <!-- Modal for Chronic Disease Management -->
+<div id="chronicDiseaseModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">×</span>
+    <h2>Chronic Disease Management</h2>
+    <p>This is detailed information about Chronic Disease Management...</p>
+  </div>
+</div>
+  </div>
+</div>
+
+      </section>
+    </main>
+
+    <script>
+      function toggleAccordion(accordionId) {
+        var content = document.getElementById(accordionId);
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          // Close all open accordions before opening the new one
+          var accordions = document.getElementsByClassName("accordion-content");
+          for (var i = 0; i < accordions.length; i++) {
+            accordions[i].style.display = "none";
+          }
+          // Open the accordion that was clicked
+          content.style.display = "block";
+        }
+      }
+    </script>
+
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2023 HealthBridge Consultancy. All rights reserved.</p>
+        <p>
+          Follow us on
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </p>
+      </div>
+    </footer>
+    <button id="scrollToTopBtn" title="Go to top">
+      <i class="fa-solid fa-circle-chevron-up"></i>
+    </button>
+
+    <script type="module" src="./js/main.js"></script>
+    <main></main>
+  </body>
 </html>

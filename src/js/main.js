@@ -1,1 +1,3 @@
-import './scrollToTop';
+import "./scrollToTop";
+import './form';
+import './modal';
