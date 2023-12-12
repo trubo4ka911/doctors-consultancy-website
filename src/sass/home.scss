@@ -1,39 +1,39 @@
 .btn {
   text-decoration: none;
-  background-color: $accent-color; // A contrasting color for the button
-  color: $white; // White text for readability
-  padding: 1rem 3rem; // Larger padding for a bigger, more clickable button
-  font-size: 1.25rem; // A larger font size to make the button text clear
-  font-weight: bold; // Bold text to stand out
-  border-radius: 0.5rem; // Rounded edges for a modern look
+  background-color: $accent-color; 
+  color: $white; 
+  padding: 1rem 3rem; 
+  font-size: 1.25rem; 
+  font-weight: bold; 
+  border-radius: 0.5rem; 
   transition: background-color 0.3s ease, transform 0.3s ease;
 
   &:hover {
     background-color: darken(
       $accent-color,
       10%
-    ); // Darken on hover for interaction feedback
-    transform: scale(1.05); // Slightly enlarge the button on hover
+    ); 
+    transform: scale(1.05); 
   }
 }
 .services-preview {
   text-align: center;
 }
 .services-preview li {
-  // Rest of the list item styles remain unchanged
+  
   transition: box-shadow 0.3s ease;
 
   &:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); // Enhanced shadow on hover for interactivity
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
   }
 }
 
 .doctors-preview .doctor-profile {
-  // Rest of the doctor profile styles remain unchanged
-  flex-direction: column; // Stack image and text for mobile view
+ 
+  flex-direction: column; 
 
   @include responsive("tablet") {
-    flex-direction: row; // Side-by-side image and text on larger screens
+    flex-direction: row; 
     align-items: center;
 
     img {
@@ -44,118 +44,116 @@
 
 .banner,
 .about-us {
-  padding: 4rem 0; // Increase padding for a more spacious look
-  text-align: center; // Center-align text for these sections
+  padding: 4rem 0; 
+  text-align: center; 
 
   h2 {
-    font-size: 2.5rem; // Make the section headers larger and more prominent
-    margin-bottom: 1rem; // Add some space below the header
-    color: $accent-color; // Use the primary color for headers
+    font-size: 2.5rem; 
+    margin-bottom: 1rem; 
+    color: $accent-color; 
   }
 
   p {
-    font-size: 1.1rem; // Slightly larger paragraph text for readability
-    max-width: 800px; // Max width for text to maintain optimal line length
-    margin: 0 auto; // Center the paragraphs if they're not full width
-    line-height: 1.8; // Increase line height for better readability
+    font-size: 1.1rem; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    line-height: 1.8; 
   }
   .container {
-    @include container; // This is the correct usage within a class selector
+    @include container; 
   }
 }
 
-// Additional styling for the banner to differentiate from the About Us section
 .banner {
   background-color: lighten(
     $primary-color,
     5%
-  ); // Lighten the primary color for a subtle background
-  color: $white; // Use white text for contrast on the banner's background
+  ); 
+  color: $white; 
 }
 
 @include responsive("phone") {
   .banner,
   .about-us {
-    padding: 2rem 1rem; // Less padding on smaller devices
+    padding: 2rem 1rem; 
 
     h2 {
-      font-size: 1.75rem; // Smaller headers on smaller devices
+      font-size: 1.75rem; 
     }
 
     p {
-      font-size: 1rem; // Slightly smaller text on smaller devices
+      font-size: 1rem; 
     }
   }
 }
 .about-us h2 {
   color: $primary-color;
 }
-// services-preview.scss
+// services-preview
 .services-preview {
-  background-color: $white; // Light background for the section
-  padding: 4rem 0; // More padding for a spacious look
+  background-color: $white; 
+  padding: 4rem 0; 
 
   h2 {
     font-size: 2.5rem;
     color: $primary-color;
     margin-bottom: 1rem;
-    text-align: center; // Center align the title
+    text-align: center; 
   }
 
   ul {
-    list-style: none; // Remove default list styling
+    list-style: none; 
     padding: 0;
-    margin: 2rem auto; // Center the list
-    max-width: 800px; // Prevent the list from becoming too wide
+    margin: 2rem auto; 
+    max-width: 800px; 
 
     li {
       background-color: $secondary-color;
       padding: 1rem;
-      margin-bottom: 0.5rem; // Space out list items
-      border-left: 4px solid $accent-color; // Add an accent bar to the left
-      font-size: 1.1rem; // Slightly larger font for readability
+      margin-bottom: 0.5rem; 
+      border-left: 4px solid $accent-color; 
+      font-size: 1.1rem; 
 
       &:last-child {
-        margin-bottom: 0; // Remove bottom margin from the last item
+        margin-bottom: 0; 
       }
     }
   }
 }
 
 .doctors-preview {
-  padding: 4rem 0; // Add top and bottom padding for spacious feel
-  text-align: center; // Center-align the text for consistency
+  padding: 4rem 0; 
+  text-align: center; 
 
   h2 {
-    font-size: 2.5rem; // Larger font size for the section heading
-    color: $primary-color; // Primary color for heading
-    margin-bottom: 2rem; // Space below the heading before the content starts
+    font-size: 2.5rem; 
+    color: $primary-color; 
+    margin-bottom: 2rem; 
   }
-
   .doctor-profile {
-    width: 100%; /* Adjust width as necessary */
-    max-width: 300px; /* Maximum width of the profile */
-    margin: auto; /* Center the profile */
-    overflow: hidden; /* Hide any overflow */
+    width: 100%; 
+    max-width: 300px; 
+    margin: auto; 
+    overflow: hidden; 
 
     img {
-      width: 100%; /* Make the image fill the container */
-      max-height: 370px; /* Maximum image height */
-      display: block; /* Prevent inline default space */
-      object-fit: cover; /* Cover the area without distorting aspect ratio */
-      object-position: top; /* Align the top of the image with the container */
+      width: 100%; 
+      max-height: 370px;
+      display: block; 
+      object-fit: cover; 
+      object-position: top; 
     }
 
     h3 {
-      font-size: 1.5rem; // Larger font size for doctor's name
+      font-size: 1.5rem; 
       color: $text-color;
-      margin-bottom: 0.5rem; // Space below the name
+      margin-bottom: 0.5rem; 
     }
 
     p {
-      font-size: 1.1rem; // Readable font size for the specialty
-      color: darken($text-color, 10%); // Slightly darker for contrast
-      margin-bottom: 2rem; // Space below before the button
+      font-size: 1.1rem; 
+      color: darken($text-color, 10%); 
+      margin-bottom: 2rem; 
     }
   }
 }
@@ -169,42 +167,42 @@
       padding: 0 1rem;
 
       img {
-        max-width: 200px; // Smaller image size for phone screens
+        max-width: 200px; 
         @media (max-width: 768px) {
           margin: auto;
         }
       }
 
       h3 {
-        font-size: 1.3rem; // Slightly smaller font size for names
+        font-size: 1.3rem; 
       }
 
       p {
-        font-size: 1rem; // Adjust font size for readability on small screens
+        font-size: 1rem; 
       }
     }
 
     .btn {
-      padding: 0.75rem 1.5rem; // Adjust button padding on small screens
+      padding: 0.75rem 1.5rem; 
     }
   }
 }
 //Call to Action for Appointments
 .cta-appointment {
-  background-color: $secondary-color; // A light background to make the section stand out
-  padding: 4rem 0; // Spacious padding for visual impact
-  text-align: center; // Center-align the content for focus
+  background-color: $secondary-color; 
+  padding: 4rem 0; 
+  text-align: center; 
 
   h2 {
-    font-size: 2.5rem; // Large, attention-grabbing font size
-    color: $primary-color; // Use the primary color for the heading
-    margin-bottom: 1rem; // Space between the heading and the paragraph
+    font-size: 2.5rem; 
+    color: $primary-color; 
+    margin-bottom: 1rem; 
   }
 
   p {
-    font-size: 1.2rem; // Slightly larger font size for importance
+    font-size: 1.2rem; 
     color: $text-color;
-    max-width: 800px; // Max-width for optimal reading length
-    margin: 0 auto 2rem; // Center the text block and space before the button
+    max-width: 800px; 
+    margin: 0 auto 2rem; 
   }
 }

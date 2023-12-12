@@ -1,26 +1,26 @@
 .footer-container {
   background-color: $footer-background;
   color: lighten($text-color, 50%);
-  padding: 2rem 0; // Increase padding for more vertical space
-  text-align: center; // Center-align the text and icons
+  padding: 2rem 0; 
+  text-align: center; 
   margin-top: auto;
   p {
-    font-size: 1rem; // Adjust font size for better readability
-    margin-bottom: 1rem; // Add space between the copyright text and icons
+    font-size: 1rem; 
+    margin-bottom: 1rem; 
   }
 
   a {
-    color: $white; // Set the color of the icons
-    margin: 0 10px; // Increase margin for more space between icons
-    transition: color 0.3s; // Smooth transition for hover effect
+    color: $white; 
+    margin: 0 10px; 
+    transition: color 0.3s; 
 
     &:hover {
-      color: $accent-color; // Change color on hover for better interaction feedback
+      color: $accent-color; 
     }
 
     i {
-      font-size: 2rem; // Increase the size of the icons for better visibility
-      vertical-align: middle; // Align icons with the text vertically
+      font-size: 2rem; 
+      vertical-align: middle; 
     }
   }
 }
