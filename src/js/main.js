@@ -1,6 +1,5 @@
 import "./scrollToTop";
+import "./burger";
 import "./form";
-import './toggleAccordion';
+import "./toggleAccordion";
 import "./modal";
-
-

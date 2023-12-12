@@ -1,95 +1,137 @@
-// header.scss
 header {
   background-color: $primary-color;
   color: $white;
-  padding: 0.5rem 1rem; // Add padding around the entire header
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem 1rem;
 
-  // This targets the anchor tag directly inside the header
-  > a {
+  .header-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
-
     img {
-      width: auto; // Maintain the original image aspect ratio
-      height: 50px; // Set a fixed height for your logo
+      max-height: 50px;
     }
-
     p {
       color: $white;
-      margin-left: 10px; // Add some space between the logo and the title
-      font-size: 1.8rem; // Adjust the font size as needed
-      font-weight: bold; // If you want the title to be bold
-      &:hover,
-      &:focus {
-        color: $accent-color;
-        transition: color 0.3s;
+      margin-left: 10px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      @media (max-width: 768px) {
+        font-size: 1rem;
       }
     }
   }
 
-  h1 {
-    margin: 0; // Remove any default margin
-    padding-left: 1rem; // Padding to keep the title from the edge
-    font-size: 2rem; // Adjust the font size as needed
+  .burger {
+    display: none;
+    cursor: pointer;
+    z-index: 9999; // High z-index to ensure visibility
+    @media (max-width: 768px) {
+      display: block;
+      position: relative;
+      width: 30px; // Width of the burger
+      height: 25px; // Height of the burger
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      span {
+        display: block;
+        width: 100%; // Full width of the parent .burger
+        height: 3px;
+        background-color: $white;
+        margin: 5px auto; // Center the bars
+        transition: all 0.3s ease;
+        &:nth-child(1) {
+          transform-origin: top left; // Anchor transformation to top left
+        }
+        &:nth-child(3) {
+          transform-origin: bottom left; // Anchor transformation to bottom left
+        }
+      }
+      &.open span:nth-child(1) {
+        transform: rotate(45deg) translate(-2px, 0px); // Adjust transformation
+      }
+      &.open span:nth-child(2) {
+        opacity: 0;
+      }
+      &.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(-2px, 2px); // Adjust transformation
+      }
+    }
   }
 
   nav {
-    // The navigation should take the full height of the header for vertical alignment
-    height: 100%;
-  }
+    ul {
+      display: flex;
+      list-style: none;
+      li {
+        margin: 0 1rem;
+        a {
+          color: $white;
+          text-decoration: none;
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 250px;
+      background-color: $primary-color;
+      flex-direction: column;
+      justify-content: flex-start;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
 
-  nav ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    align-items: center; // This ensures vertical alignment
-    margin-right: 1rem; // Padding to keep the nav from the edge
-    padding: 0; // Reset any default padding
-    list-style: none; // Remove default list styling
-  }
-
-  nav ul li {
-    margin: 0 10px; // Add horizontal margin for spacing between nav items
-    a {
-      color: $white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      padding: 10px 15px; // Padding to make each nav item a larger click target
-      border-radius: 5px; // Rounded corners for modern aesthetic
-      transition: background-color 0.3s, color 0.3s; // Smooth transition for hover effects
-      &:hover,
-      &:focus {
-        background-color: darken(
-          $primary-color,
-          10%
-        ); // Subtle background color on hover
-        border-radius: 5px;
-        color: $secondary-color; // Text color change for contrast
-        text-decoration: none; // Remove underline from links
+      ul {
+        flex-direction: column;
+        margin-top: 4rem;
+        li {
+          margin: 1rem 0;
+        }
       }
     }
   }
+}
 
-  // Media query for responsive navigation
-  @include responsive("phone") {
-    flex-direction: column; // Stack the title and nav vertically on smaller screens
-    h1 {
-      padding: 0.5rem; // Adjust padding for mobile
-      text-align: center; // Center the title on mobile
-    }
-    nav ul {
-      width: 100%; // Full width for the nav
-      justify-content: center; // Center the nav items
-      li a {
-        display: block; // Stack the links
-        width: 100%; // Full width for each link
-        text-align: center; // Center the text for each link
-      }
-    }
-  }
+// JS Toggle
+.active {
+  transform: translateX(0);
+}
+.burger.open .bar:nth-child(1),
+.burger.open .bar:nth-child(3) {
+  position: absolute;
+  width: 30px; // Adjust width as needed
+}
+
+.burger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.burger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.burger.open .bar:nth-child(2) {
+  opacity: 0;
 }

@@ -13,12 +13,12 @@
   a {
     
     margin-top: 0.5rem;
-    display: block; // Ensures each link is on a new line
-    color: #005f56; // Adjust color to match your design
-    text-decoration: none; // Removes underline from links
+    display: block; 
+    color: #005f56; 
+    text-decoration: none; 
 
     &:hover {
-      color: #00796b; // Darker shade when hovered for better interaction feedback
+      color: #00796b; 
     }
   }
 
@@ -26,7 +26,7 @@
     display: flex;
     justify-content: space-around;
     margin-top: 2rem;
-    border-bottom: 1px solid #ccc; // Adds a separator
+    border-bottom: 1px solid #ccc; 
     padding-bottom: 2rem;
 
     div {

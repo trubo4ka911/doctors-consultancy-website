@@ -71,4 +71,7 @@
       background-color: $service-background-color; 
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
       outline: none; 
+      @media (max-width: 768px) {
+        text-align: center;
+      }
     }

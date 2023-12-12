@@ -1,22 +1,24 @@
 .contact-form-container {
-  padding: 4rem 0; // Increase padding for a more spacious look
   max-width: 800px;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 0;
   h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     color: $accent-color;
-    text-align: center; // Center-align text for these sections
+    text-align: center; 
   }
   p {
-    font-size: 1.1rem; // Slightly larger paragraph text for readability
-    max-width: 800px; // Max width for text to maintain optimal line length
-    margin: 0 auto; // Center the paragraphs if they're not full width
-    line-height: 1.8; // Increase line height for better readability
-    text-align: center; // Center-align text for these sections
+    font-size: 1.1rem; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    line-height: 1.8; 
+    text-align: center; 
   }
   .input-group {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1rem;
 
     label {
@@ -28,7 +30,9 @@
     input[type="email"],
     input[type="date"],
     textarea {
+      box-sizing: border-box;
       width: 100%;
+      margin: auto;
       padding: 0.5rem;
       border: 1px solid #ccc;
       border-radius: 0.25rem;
@@ -61,8 +65,9 @@
   display: none;
   position: fixed;
   z-index: 1000;
-  left: 40%;
-  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 200px;
   height: 60px;
   overflow: auto;
@@ -70,12 +75,18 @@
 }
 
 .alert {
-  background-color: $accent-color; 
-  color: $secondary-color; 
+  background-color: $accent-color;
+  color: $secondary-color;
   padding: 20px;
-  margin: 15% auto; 
+  margin: 15% auto;
   border: 1px solid #d6e9c6;
-  border-radius: 4px; 
-  width: 50%; 
-  text-align: center; 
+  border-radius: 4px;
+  width: 50%;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .contact-form-container {
+    width: 90%; 
+    padding: 0 5%; 
+  }
 }

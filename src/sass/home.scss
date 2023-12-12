@@ -170,6 +170,9 @@
 
       img {
         max-width: 200px; // Smaller image size for phone screens
+        @media (max-width: 768px) {
+          margin: auto;
+        }
       }
 
       h3 {
@@ -205,4 +208,3 @@
     margin: 0 auto 2rem; // Center the text block and space before the button
   }
 }
-
